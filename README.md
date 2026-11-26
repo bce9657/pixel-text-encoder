@@ -1,8 +1,36 @@
 # pixel-text-encoder
 
-# 
+## Project Description
 In digital video and photography, the $Y'C_BC_R$ is a color space used as part of the color image/video pipeline. $Y'C_BC_R$ is based on RGB primaries. $Y'$ is the luma componant (luminosity), and $C_B$ and $C_R$ are the blue-difference and red-difference chroma componants.
 
+## Development Environment
+
+- GitHub
+- GitHub Codespaces
+- C23
+- gcc
+
+
+## Project Structure
+
+```text
+pixel-text-encoder/
+|
+|--- input/
+|
+|--- output/
+|
+|--- src/
+|    |---main.c   
+|    |---colour.c   
+|    |---colour.
+|    |---encoder.c   
+|    |---encoder.h
+|    |---file_reader.c   
+|    |---file_reader.h
+|    |---pixel_maker.c   
+|____|___pixel_maker.h
+```
 
 ## Resources 
 
