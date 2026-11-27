@@ -1,46 +1,42 @@
 # pixel-text-encoder
 
-## 1. Project Description
-In digital video and photography, the $Y'C_BC_R$ is a color space used as part of the color image/video pipeline. $Y'C_BC_R$ is based on RGB primaries. $Y'$ is the luma componant (luminosity), and $C_B$ and $C_R$ are the blue-difference and red-difference chroma componants.
+A C program that converts text files into a pixel grid using $Y'C_BC_R$ colour encoding.
 
-## 2. Technical Information: Pixels and colour
+## Project Goals
+- Read text files
+- Convert text into a binary representation
+- Encode data into pixel values
+- Represent pixels using $Y'C_BC_R$ colour spaces
+- Investigate chroma subsampling and pixel density
 
-### 2.1 Physics of colour
+## How it works
 
+The program converts the input file into binary data and maps the resulting bits onto a pixel grid.
 
+Each pixel contains $Y'$ (luma), $C_B$ (blue difference chroma) and $C_R$ (red difference chroma). 
 
-### 2.2 RGB
-
-A pixel is represented by three values: **R**ed** B**blue** G**reen. Each channel commonly has values ranging from 0-255.
-
-For example:
-
-|**Colour**|**R**|**G**|**B**|
-|---|---|---|---|
-|Black|0|0|0|
-|White|255|255|255|
-|Red|255|0|0|
-|Green|0|255|0|
-|Blue|0|0|255|
-|Gray|128|128|128|
-|Yellow|255|255|0|
-
-With a 8-bit RGB values, there are $256^3=16,777,216$ possible colours. RGB is usefull in regard to the possible combination of colour values, but what it doesn't account for is the luma of an image. Luma represents the achromatic portion (black and white) of an image, representing the brightness. \
-Human vision relies more on luminance differences than chromatic ones, which is why $Y'C_BC_R$ colour space has been chosen as a basis for the encoding. $Y'C_BC_R$ is still based on RGB primaries ($C_BC_R$ values), but it also accounts for luminance ($Y'$)
+[More technical information](docs/technical_doc.md)
 
 
-## 3. Development Environment
+## Development Environment
 
 - GitHub
 - GitHub Codespaces
 - C23
 - gcc
 
-
-## 4. Project Structure
+## Project Structure
 
 ```text
 pixel-text-encoder/
+|
+|--- docs/
+|    |---res/
+|    |   |___...
+|    |
+|    |---workd_diary.md
+|    |---literature.md
+|    |___technical_doc.md
 |
 |--- input/
 |
@@ -58,14 +54,13 @@ pixel-text-encoder/
 |____|___pixel_maker.h
 ```
 
-## Resources 
+## Build
 
-- [Microsoft - "About YUV Video"](https://learn.microsoft.com/en-us/windows/win32/medfound/about-yuv-video?utm_source=chatgpt.com)
-- [Charles Poynton - "Frequently Asked Questions about Gamma"](https://www.cs.tufts.edu/~nr/cs257/archive/charles-poynton/GammaFAQ.pdf)
-- [emby - "YCbCr Video"](https://emby.media/learn/articles/video/color-pixel-formats/Video-YCbCr.html?utm_source=chatgpt.com)
-- [NASA - "Colorspace Transforms"](https://gmao.gsfc.nasa.gov/media/gmaoftp/jkolassa/Matlab_scripts/colorspace.html?utm_source=chatgpt.com)
-- [MIT - "Color Technology"](people.csail.mit.edu/fredo/comp-photo-book/02-fundamentals-09-color-technology.html?utm_source=chatgpt.com)
-- [XILINX - "Color-Space Converter: RGB to YCrCb](https://docs.amd.com/api/khub/documents/zCxg8kafffeq02OBDWNnxA/content?utm_source=chatgpt.com)
+## Documentation
+
+- [Learning Journal](docs/diary.md)
+- [Technical Documentation](docs/technical_doc.md)
+- [Literature](docs/literature.md)
 
 
 
