@@ -56,6 +56,8 @@ pixel-text-encoder/
 
 ## Build
 
+<h1><p style = "color: #FF00FF";>REMINDER: when finished</p></h1>
+
 ## Documentation
 
 - [Learning Journal](docs/diary.md)
