@@ -60,7 +60,7 @@ pixel-text-encoder/
 
 ## Documentation
 
-- [Learning Journal](docs/diary.md)
+- [Learning Journal](docs/workd_diary.md)
 - [Technical Documentation](docs/technical_doc.md)
 - [Literature](docs/literature.md)
 
